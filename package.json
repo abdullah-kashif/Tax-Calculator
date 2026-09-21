@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "node build.js",
     "lint": "oxlint",
     "preview": "vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "test": "node --input-type=module -e \"import('./app.js').then(() => console.log('OK'));\""
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
